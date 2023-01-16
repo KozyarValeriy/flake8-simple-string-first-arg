@@ -26,10 +26,10 @@ it is not allowed to use f-sting, .format method, string concat and % statement 
 
 # flake8 codes
 
-   * SFA100: In calling <CallableName> f-string is used
-   * SFA200: In calling <CallableName> string.format() is used
-   * SFA300: In calling <CallableName> string concatenation ("+") is used
-   * SFA400: In calling <CallableName> "%" is used
+   * SFA100: In calling {CallableName} f-string is used
+   * SFA200: In calling {CallableName} string.format() is used
+   * SFA300: In calling {CallableName} string concatenation ("+") is used
+   * SFA400: In calling {CallableName} "%" is used
 
 # Settings
 
