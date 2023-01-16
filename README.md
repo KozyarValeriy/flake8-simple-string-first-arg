@@ -1,4 +1,4 @@
-# flake8-complicated-walrus
+# flake8-simple-string-first-arg
 
 This *Flake8* plugin for checking that first param of callable object is simple string. 
 Plugin will check for specified callable objects that 
