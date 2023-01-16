@@ -6,11 +6,11 @@ it is not allowed to use f-sting, .format method, string concat and % statement 
 
 # Quick Start Guide
 
-1. Install ``flake8-simple-string-first-arg`` from PyPI with pip::
+1. Install ``flake8-simple-string-first-arg`` from PyPI with pip:
 
         pip install flake8-simple-string-first-arg
 
-2. Configure a mark that you would like to validate::
+2. Configure a mark that you would like to validate:
 
         cd project_root/
         vi setup.cfg
