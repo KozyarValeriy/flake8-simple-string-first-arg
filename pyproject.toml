@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "flake8-simple-string-first-arg"
-version = "0.1.0"
+version = "0.1.1"
 license = "MIT"
 description = "This Flake8 plugin for checking that first param of callable is simple string."
 authors = ["Kozyar Valeriy <monqpepers@gmail.com>"]
