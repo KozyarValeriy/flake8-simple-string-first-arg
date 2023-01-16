@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "flake8-simple-string-first-arg"
-version = "0.1.1"
+version = "0.1.2"
 license = "MIT"
 description = "This Flake8 plugin for checking that first param of callable is simple string."
 authors = ["Kozyar Valeriy <monqpepers@gmail.com>"]
@@ -26,11 +26,9 @@ line-length = 120
 [tool.poetry.dependencies]
 python = "^3.8"
 flake8 = "*"
-astpretty = "*"
 
 [tool.poetry.dev-dependencies]
 autoflake = "^1"
-pytest = "^7.2.1"
 black = "^22.12.0"
 flake8-builtins = "^2.1.0"
 flake8-comprehensions = "^3.10.1"
@@ -43,10 +41,11 @@ flake8-quotes = "^3.3.2"
 flake8-return = "^1.2.0"
 isort = "^5.11.4"
 mypy = "^0.991"
-pylint = "^2.15.10"
-pytest-deadfixtures = "^2.2.1"
 pep8-naming = "^0.12"
+pylint = "^2.15.10"
+pytest = "^7.2.1"
 pytest-cov = "^4.0.0"
+pytest-deadfixtures = "^2.2.1"
 unify = "^0.5"
 
 
