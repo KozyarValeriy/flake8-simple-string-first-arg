@@ -11,7 +11,7 @@ test:
 
 lint:
 	flake8 --jobs 1 --statistics --show-source $(CODE)
-	pylint --jobs 1 $(PYLINT_CODE)
+	pylint --jobs 1 --rcfile=pyproject.toml $(PYLINT_CODE)
 	mypy $(MYPY_CODE)
 	black --target-version py38 --skip-string-normalization --check $(CODE)
 	pytest --dead-fixtures --dup-fixtures

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "flake8-simple-string-first-arg"
-version = "0.1.2"
+version = "0.2.0"
 license = "MIT"
 description = "This Flake8 plugin for checking that first param of callable is simple string."
 authors = ["Kozyar Valeriy <monqpepers@gmail.com>"]
@@ -12,6 +12,9 @@ classifiers=[
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
     "Topic :: Software Development :: Libraries :: Python Modules",
     "Topic :: Software Development :: Quality Assurance",
 ]
@@ -20,42 +23,51 @@ classifiers=[
 [tool.poetry.plugins."flake8.extension"]
 SFA = "flake8_simple_string_first_arg:Plugin"
 
+[tool.poetry.dependencies]
+python = "^3.9"
+flake8 = "*"
+
+[tool.poetry.group.dev.dependencies]
+astpretty = "^3.0"
+autoflake = "^2.2"
+black = "^23.7"
+flake8-builtins = "^2.1"
+flake8-comprehensions = "^3.14"
+flake8-eradicate = "^1.5"
+flake8-isort = "^6.0"
+flake8-print = "^5.0"
+flake8-pytest = "^1.4"
+flake8-pytest-style = "^1.7"
+flake8-quotes = "^3.3"
+flake8-return = "^1.2"
+isort = "^5.12"
+mypy = "^1.4"
+pep8-naming = "^0.12"
+pylint = "^2.17"
+pytest = "^7.2"
+pytest-cov = "^4.1"
+pytest-deadfixtures = "^2.2"
+unify = "^0.5"
+
 [tool.black]
 line-length = 120
 
-[tool.poetry.dependencies]
-python = "^3.8"
-flake8 = "*"
-
-[tool.poetry.dev-dependencies]
-autoflake = "^1"
-black = "^22.12.0"
-flake8-builtins = "^2.1.0"
-flake8-comprehensions = "^3.10.1"
-flake8-eradicate = "^1.4.0"
-flake8-isort = "^6.0.0"
-flake8-print = "^5.0.0"
-flake8-pytest = "^1.4"
-flake8-pytest-style = "^1.6.0"
-flake8-quotes = "^3.3.2"
-flake8-return = "^1.2.0"
-isort = "^5.11.4"
-mypy = "^0.991"
-pep8-naming = "^0.12"
-pylint = "^2.15.10"
-pytest = "^7.2.1"
-pytest-cov = "^4.0.0"
-pytest-deadfixtures = "^2.2.1"
-unify = "^0.5"
-
+[tool.isort]
+balanced_wrapping=true
+default_section="THIRDPARTY"
+include_trailing_comma=true
+known_first_party="tests"
+line_length=88
+multi_line_output=3
 
 [tool.pylint]
 max-args = 5
 output-format = "colorized"
 max-line-length=120
 disable = [
+    "C0103", # Attribute name doesn't conform to snake_case naming style (invalid-name)
     "C0114", # Missing module docstring (missing-docstring)
     "C0115", # Missing class docstring (missing-class-docstring)
     "C0116", # Missing function or method docstring (missing-function-docstring)
-    "C0103", # invalid-name
+    "C0301", # Line too long (m/n) (line-too-long)
 ]
